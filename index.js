@@ -1,7 +1,7 @@
 // import the server and start it!
 
 
-const server = express()
+
 
 server.use(express.json()) // parse json from requests
 

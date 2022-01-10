@@ -3,6 +3,7 @@
 const express = require('express') // commonjs
 
 // INSTANCE OF EXPRESS APP
+const server = express()
 
 // GLOBAL MIDDLEWARE
 
