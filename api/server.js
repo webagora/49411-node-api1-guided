@@ -73,7 +73,11 @@ server.put('/api/dogs/:id', async (req, res) => {
   const { id } = req.params
   const { name, weight } = req.body
   console.log(id, name, weight)
-  res.json('put scaffolded!')
+  try {
+    const data = await Dog.update()
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', async (req, res) => {
