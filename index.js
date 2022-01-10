@@ -4,4 +4,6 @@ const express = require('express') // commonjs
 
 const server = express()
 
-server.use(express.json())
+server.use(express.json()) // parse json from requests
+
+
