@@ -16,6 +16,11 @@ module.exports = {
     return dogs
   },
 
+  findAllOld() {
+    // SELECT * FROM dogs;
+    return Promise.resolve(dogs)
+  },
+
   async findById(id) {
     // SELECT * FROM dogs WHERE id = 1;
     const dog = dogs.find(d => d.id === id)
