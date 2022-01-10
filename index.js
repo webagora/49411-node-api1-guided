@@ -6,4 +6,4 @@ const server = express()
 
 server.use(express.json()) // parse json from requests
 
-
+server.get('/hello_world')
