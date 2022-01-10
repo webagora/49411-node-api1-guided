@@ -88,7 +88,7 @@ server.put('/api/dogs/:id', async (req, res) => {
 server.delete('/api/dogs/:id', async (req, res) => {
   try {
     const data = await Dog.delete(req.params.id)
-    console.log(data)
+    res.json(data)
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
