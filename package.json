@@ -8,7 +8,8 @@
     "ketchup": "git fetch && git reset --hard origin/lecture"
   },
   "devDependencies": {
-    "eslint": "^8.6.0"
+    "eslint": "^8.6.0",
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
     "express": "^4.17.2",
