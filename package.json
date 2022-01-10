@@ -1,0 +1,12 @@
+{
+  "name": "gp",
+  "version": "1.0.0",
+  "description": "Guided project for **Node API 1** Module.",
+  "main": "index.js",
+  "scripts": {
+    "ketchup": "git fetch && git reset --hard origin/lecture"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  }
+}
