@@ -1,6 +1,7 @@
 // IMPORTS AT THE TOP
 // import express from 'express' in ES6
 const express = require('express') // commonjs
+const Dog = require('')
 
 // INSTANCE OF EXPRESS APP
 const server = express()
