@@ -42,7 +42,6 @@ server.get('/api/dogs/:id', async (req, res) => {
   console.log(req.body)
   console.log(req.params)
   try {
-    throw new Error('what a disaster')
     const { id } = req.params
     const dog = await Dog.findById(id)
     if (!dog) {
