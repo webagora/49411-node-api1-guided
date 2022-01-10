@@ -60,8 +60,9 @@ server.get('/api/dogs/:id', async (req, res) => {
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', async (req, res) => {
   try {
-    const result = await Dog.create(req.body)
-    console.log(result)
+    const newDog = await Dog.create(req.body)
+    console.log(newDog)
+    res.status(201).json(newDog)
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
