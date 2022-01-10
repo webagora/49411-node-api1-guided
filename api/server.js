@@ -86,7 +86,11 @@ server.put('/api/dogs/:id', async (req, res) => {
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', async (req, res) => {
-  res.json('delete scaffolded!')
+  try {
+
+  } catch (err) {
+    
+  }
 })
 // EXPOSING THE SERVER TO OTHER MODULES
 module.exports = server // export default server
