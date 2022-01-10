@@ -26,6 +26,22 @@ server.get('/api/dogs', async (req, res) => {
     res.status(500).json({ message: err.message })
   }
 })
+server.get('/api/dogs', (req, res) => {
+  Dog.findAll()
+    .then(dogs => {
+      res.json(dogs)
+    })
+
+
+
+
+  try {
+    const dogs = await Dog.findAll()
+    res.json(dogs)
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
+})
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
