@@ -70,9 +70,11 @@ server.post('/api/dogs', async (req, res) => {
 })
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 server.put('/api/dogs/:id', async (req, res) => {
-  res.json('put scaffolded')
+  res.json('put scaffolded!')
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
-server.delete('/api/')
+server.delete('/api/dogs/:id', async (req, res) => {
+  res.json('delete scaffolded!')
+})
 // EXPOSING THE SERVER TO OTHER MODULES
 module.exports = server // export default server
