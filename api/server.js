@@ -74,11 +74,11 @@ server.put('/api/dogs/:id', async (req, res) => {
   const { name, weight } = req.body
   console.log(id, name, weight)
   try {
-    const data = await Dog.update(id, { name, weight })
-    if (!data) {
+    const updatedDog = await Dog.update(id, { name, weight })
+    if (!updatedDog) {
       res.status(404).json({ message: `dog ${id} not here` })
     } else {
-      res.json(data)
+      res.json(updatedDog)
     }
   } catch (err) {
     res.status(500).json({ message: err.message })
