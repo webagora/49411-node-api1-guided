@@ -24,8 +24,7 @@ module.exports = {
   async findById(id) {
     // SELECT * FROM dogs WHERE id = 1;
     const dog = dogs.find(d => d.id === id)
-    // return dog
-    throw new Error('arggghhhhh')
+    return dog
   },
 
   async create({ name, weight }) {
