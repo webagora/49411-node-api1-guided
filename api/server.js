@@ -63,7 +63,7 @@ server.post('/api/dogs', async (req, res) => {
     console.log(name, weight)
     const newDog = await Dog.create({ name, weight })
     console.log(newDog)
-    res.status(201).json(newDog)
+    res.status(201).json(newDog) // :(
   } catch (err) {
     res.status(500).json({ message: err.message })
   }
