@@ -20,9 +20,9 @@ server.get('/hello_world', (req, res) => {
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
 server.get('/api/dogs', async (req, res) => {
   try {
-
+    const dogs = await Dog.findAll()
   } catch(err) {
-    
+
   }
 })
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
