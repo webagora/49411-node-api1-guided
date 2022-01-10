@@ -14,7 +14,7 @@ server.use(express.json()) // parse json from requests
 // api is made of endpoints such as
 // http://cats.com:9000/hello_world
 server.get('/hello_world', (req, res) => {
-  res.status(200).json('hello world!!!!!')
+  res.status(200).json('hello web 49!!!!!')
 })
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
