@@ -17,6 +17,9 @@ server.get('/hello_world', (req, res) => {
   res.status(200).json('hello web 49!!!!!')
 })
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
+server.get('/api/dogs', async (req, res) => {
+  
+})
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
