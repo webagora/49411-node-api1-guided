@@ -31,16 +31,9 @@ server.get('/api/dogs', (req, res) => {
     .then(dogs => {
       res.json(dogs)
     })
-
-
-
-
-  try {
-    const dogs = await Dog.findAll()
-    res.json(dogs)
-  } catch (err) {
-    res.status(500).json({ message: err.message })
-  }
+    .catch(err => {
+      res.status(500).json({ message: err.message })
+    })
 })
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
