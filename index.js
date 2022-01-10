@@ -3,3 +3,5 @@ const express = require('express') // commonjs
 // import express from 'express'
 
 const server = express()
+
+server.use(express.json())
