@@ -42,6 +42,7 @@ server.get('/api/dogs/:id', async (req, res) => {
   console.log(req.body)
   console.log(req.params)
   res.json('scaffoldign req by id endpoint')
+  res.json('scaffoldign req by id endpoint')
 })
 
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
