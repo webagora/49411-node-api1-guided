@@ -10,6 +10,7 @@ let dogs = [
 ]
 
 module.exports = {
+  // returns promise
   async findAll() {
     // SELECT * FROM dogs;
     return dogs
