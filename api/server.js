@@ -1,4 +1,6 @@
 // IMPORTS AT THE TOP
+// import express from 'express' in ES6
+const express = require('express') // commonjs
 
 // INSTANCE OF EXPRESS APP
 
