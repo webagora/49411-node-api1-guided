@@ -56,7 +56,6 @@ server.get('/api/dogs/:id', async (req, res) => {
     res.status(500).json({ message: err.message })
   }
 })
-
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', async (req, res) => {
   try {
