@@ -1,4 +1,4 @@
-const { nanoid } = require('nanoid')
+const { nanoid } = require('nanoid') // import { nanoid } from 'nanoid'
 
 function getId() {
   return nanoid().slice(0, 5)
