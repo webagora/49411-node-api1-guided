@@ -69,6 +69,21 @@ server.post('/api/dogs', async (req, res) => {
     }
   })
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
+server.put('/api/dogs/:id', async (req, res) => {
+    const { id } = req.params
+    const { name, weight } = req.body
+    console.log(id, name, weight)
+    try {
+      const updatedDog = await Dog.update(id, { name, weight })
+      if (!updatedDog) {
+        res.status(404).json({ message: `dog ${id} not here` })
+      } else {
+        res.json(updatedDog)
+      }
+    } catch (err) {
+      res.status(500).json({ message: err.message })
+    }
+  })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
