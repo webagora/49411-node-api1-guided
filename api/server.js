@@ -36,6 +36,13 @@ server.get('/api/dogs', async (req, res) => {
       })
   })
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
+server.get('/api/dogs/:id', async (req, res) => {
+    console.log(req.method)
+    console.log(req.headers)
+    console.log(req.body)
+    console.log(req.params)
+    res.json('scaffolding req by id endpoint')
+  })
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)

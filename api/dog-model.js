@@ -34,6 +34,7 @@ module.exports = {
     return newDog
   },
 
+  
   async update(id, changes) {
     // UPDATE dogs SET name = 'Foo', weight = 9 WHERE id = 1;
     const dog = dogs.find(dog => dog.id === id)
