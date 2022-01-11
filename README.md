@@ -42,3 +42,16 @@ Here is a table with the `endpoint` descriptions:
 | View Dog details      | /api/dogs/{id}     | GET    | a Dog             |
 | Update Dog            | /api/dogs/{id}     | PUT    | updated Dog       |
 | Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
+
+
+##  other bask tool to query api
+
+```
+curl localhost:9000/hello_world -v
+```
+
+The following need install httpie first:
+
+```
+http get :9000/hello_world -v
+```
