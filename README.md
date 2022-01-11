@@ -54,4 +54,6 @@ The following need install httpie first:
 
 ```
 http get :9000/hello_world -v
+
+http post :9000/api/dogs name=fodi weight:=45
 ```
