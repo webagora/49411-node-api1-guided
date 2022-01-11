@@ -1,6 +1,7 @@
 // IMPORTS AT THE TOP
 // import express from 'express' in ES6
 const express = require('express') // commonjs
+const Dog = require('./dog-model') 
 
 // INSTANCE OF EXPRESS APP
 const server = express()
@@ -17,6 +18,23 @@ server.get('/hello_world', (req, res) => {
     res.status(201).json('hello world!')
 })
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
+server.get('/api/dogs', async (req, res) => {
+    try {
+      const dogs = await Dog.findAll()
+      res.json(dogs)
+    } catch (err) {
+      res.status(500).json({ message: err.message })
+    }
+  })
+  server.get('/api/dogs', (req, res) => {
+    Dog.findAll()
+      .then(dogs => {
+        res.json(dogs)
+      })
+      .catch(err => {
+        res.status(500).json({ message: err.message })
+      })
+  })
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)

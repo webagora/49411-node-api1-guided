@@ -10,9 +10,15 @@ let dogs = [
 ]
 
 module.exports = {
+  //  return promise
   async findAll() {
     // SELECT * FROM dogs;
     return dogs
+  },
+
+  findAllOld() {
+    // SELECT * FROM dogs;
+    return Promise.resolve(dogs)
   },
 
   async findById(id) {
