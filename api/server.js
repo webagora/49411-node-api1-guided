@@ -41,7 +41,20 @@ server.get('/api/dogs/:id', async (req, res) => {
     console.log(req.headers)
     console.log(req.body)
     console.log(req.params)
-    res.json('scaffolding req by id endpoint')
+    try {
+        const { id } = req.params
+        const dog = await Dog.findById(id)
+        if (!dog) {
+          res.status(404).json({ message: 'no dog' })
+        } else {
+          res.status(200).json(dog)
+        }
+      } catch (err) {
+        // if promise were to reject
+        // or if another thing crashed inside the try
+        // then we fall through here
+        res.status(500).json({ message: err.message })
+      }    
   })
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
